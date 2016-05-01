@@ -55,7 +55,7 @@ EXPOSE 53/udp 53 80 443 389 636 88 464 88/udp 464/udp 123/udp 7389 9443 9444 944
 
 VOLUME [ "/tmp", "/run", "/data" ]
 
-ENTRYPOINT [ "/usr/sbin/init-data" ]
+#ENTRYPOINT [ "/usr/sbin/init-data" ]
 RUN uuidgen > /data-template/build-id
 
 LABEL RUN "docker run -ti -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v /opt/ipa-data:/data:Z -h ipa.example.test ${NAME}"
