@@ -1,7 +1,9 @@
 # Clone from the Fedora 23 image
-FROM fedora:23
+FROM seanorama/ycloud-docker-fedora
 
-MAINTAINER Jan Pazdziora
+MAINTAINER Sean Roberts
+
+ENV PASSWORD BadPass#1
 
 RUN mkdir -p /run/lock && dnf install -y freeipa-server freeipa-server-dns bind bind-dyndb-ldap && dnf clean all
 
